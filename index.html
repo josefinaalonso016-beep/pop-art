@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Art</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor-web">
+
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo Pop Art">
+            </a>
+
+            <nav class="menu">
+                <a href="index.html" class="activo">inicio</a>
+                <a href="historia.html">historia</a>
+                <a href="arte-y-tecnicas.html">arte y técnicas</a>
+                <a href="referentes.html">referentes</a>
+                <a href="galeria.html">galería</a>
+                <a href="contacto.html">contacto</a>
+            </nav>
+
+            <button class="buscar" aria-label="Buscar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+
+        </header>
+
+
+        <main>
+            <section class="pagina">
+
+                <section class="hero">
+                    <img src="img/home.png" alt="Pop Art Home" class="imagen-home">
+                </section>
+
+
+                <section class="registro">
+                    <div class="texto-registro">
+                        <strong>¡Sumate a la revolución pop!</strong>
+                        <span>Registrate ahora y accedé a contenido exclusivo.</span>
+                    </div>
+
+                    <div class="flecha-registro">➜</div>
+
+                    <button class="boton-registro" id="btnAbrirModal">INICIAR SESIÓN</button>
+                </section>
+
+            </section>
+        </main>
+
+        <footer class="footer-pop">
+            <div class="footer-contenido">
+                <div class="footer-marca">
+                    <span class="logo-texto">POP ART</span>
+                    <p>El arte de transformar lo cotidiano en icono.</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 Pop Art</p>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <button class="modal-close" id="btnCerrarModal">✕</button>
+
+
+            <form class="form-modal" id="formLogin">
+                <h2>INICIAR SESIÓN</h2>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-submit">ENTRAR</button>
+                <p class="toggle-texto">¿No tenés cuenta? <a href="#" id="linkIrARegistro">Registrate acá</a></p>
+            </form>
+
+            <form class="form-modal oculto" id="formRegistro">
+                <h2>CREAR CUENTA</h2>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-submit">REGISTRARME</button>
+                <p class="toggle-texto">¿Ya tenés cuenta? <a href="#" id="linkIrALogin">Iniciá sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

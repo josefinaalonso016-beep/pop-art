@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería — Pop Art</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor-web">
+
+
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo Pop Art">
+            </a>
+
+            <nav class="menu">
+                <a href="index.html">inicio</a>
+                <a href="historia.html">historia</a>
+                <a href="arte-y-tecnicas.html">arte y técnicas</a>
+                <a href="referentes.html">referentes</a>
+                <a href="galeria.html" class="activo">galería</a>
+                <a href="contacto.html">contacto</a>
+            </nav>
+
+            <button class="buscar" aria-label="Buscar" id="btnAbrirModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </header>
+
+
+        <main>
+            <section class="pagina">
+
+                <h2 class="subtitulo-galeria">GALERÍA DE ESPACIOS & MUSEOS</h2>
+
+                <nav class="barra-filtros">
+                    <button class="btn-filtro activo" onclick="filtrarGaleria('todos', this)">Todos</button>
+                    <button class="btn-filtro" onclick="filtrarGaleria('museos', this)">Museos</button>
+                    <button class="btn-filtro" onclick="filtrarGaleria('exhibiciones', this)">Exhibiciones</button>
+                    <button class="btn-filtro" onclick="filtrarGaleria('urbano', this)">Arte Urbano</button>
+                    <button class="btn-filtro" onclick="filtrarGaleria('esculturas', this)">Esculturas</button>
+                </nav>
+
+                <div class="grid-galeria" id="gridGaleria">
+
+
+                    <div class="item-galeria museos" data-img="img/galeria-moma.jpg" data-titulo="MoMA — Nueva York">
+                        <div class="wrap-img">
+                            <img src="img/galeria-moma.jpg" alt="MoMA Nueva York">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">MoMA — Nueva York</span>
+                            <span class="sub-foto">Sala de Colección Permanente</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria exhibiciones" data-img="img/galeria-warhol-expo.jpg"
+                        data-titulo="Andy Warhol Retrospective — Tate Modern">
+                        <div class="wrap-img">
+                            <img src="img/galeria-warhol-expo.jpg" alt="Exhibición Warhol">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Andy Warhol Retrospective</span>
+                            <span class="sub-foto">Tate Modern — Londres</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria urbano" data-img="img/galeria-haring-mural.jpg"
+                        data-titulo="Bowery Wall Mural — Keith Haring">
+                        <div class="wrap-img">
+                            <img src="img/galeria-haring-mural.jpg" alt="Mural Keith Haring">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Bowery Wall Mural</span>
+                            <span class="sub-foto">SoHo — Nueva York</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria esculturas" data-img="img/galeria-cuchara-escultura.jpg"
+                        data-titulo="Spoonbridge and Cherry — Claes Oldenburg">
+                        <div class="wrap-img">
+                            <img src="img/galeria-cuchara-escultura.jpg" alt="Spoonbridge and Cherry">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Spoonbridge and Cherry</span>
+                            <span class="sub-foto">Claes Oldenburg & Coosje van Bruggen</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria museos" data-img="img/galeria-centropompidou.jpg"
+                        data-titulo="Centre Pompidou — París">
+                        <div class="wrap-img">
+                            <img src="img/galeria-centropompidou.jpg" alt="Centre Pompidou">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Centre Pompidou</span>
+                            <span class="sub-foto">París — Francia</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria exhibiciones" data-img="img/galeria-pop-shop.jpg"
+                        data-titulo="The Pop Shop (1986) — Keith Haring">
+                        <div class="wrap-img">
+                            <img src="img/galeria-pop-shop.jpg" alt="Pop Shop Keith Haring">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">The Pop Shop (1986)</span>
+                            <span class="sub-foto">Keith Haring — Manhattan</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria urbano" data-img="img/galeria-mural-pisa.jpg"
+                        data-titulo="Mural Tuttomondo — Keith Haring">
+                        <div class="wrap-img">
+                            <img src="img/galeria-mural-pisa.jpg" alt="Mural Tuttomondo">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Mural "Tuttomondo"</span>
+                            <span class="sub-foto">Pisa — Italia</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria esculturas" data-img="img/galeria-love-escultura.jpg"
+                        data-titulo="LOVE Sculpture — Robert Indiana">
+                        <div class="wrap-img">
+                            <img src="img/galeria-love-escultura.jpg" alt="Escultura LOVE">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">LOVE Sculpture</span>
+                            <span class="sub-foto">Robert Indiana — Filadelfia</span>
+                        </div>
+                    </div>
+
+                </div>
+        </main>
+
+
+        <footer class="footer-pop">
+            <div class="footer-contenido">
+                <div class="footer-marca">
+                    <span class="logo-texto">POP ART</span>
+                    <p>El arte de transformar lo cotidiano en icono.</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 Pop Art</p>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <div class="modal-visor" id="modalVisor">
+        <span class="cerrar-modal" id="btnCerrarVisor">&times;</span>
+        <img class="imagen-agrandada" id="imgModal" src="" alt="Imagen Agrandada">
+        <div class="epigrafe-modal" id="textoModal"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

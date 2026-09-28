@@ -1,0 +1,1272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: "Nunito Sans", sans-serif;
+    color: #111111;
+}
+
+.contenedor-web {
+    width: 98%;
+    max-width: 1600px;
+    margin: 10px auto;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 3px solid black;
+    background-color: white;
+}
+
+.logo {
+    width: 130px;
+}
+
+.logo img {
+    width: 110px;
+    height: auto;
+    display: block;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background-color: #ffd900;
+}
+
+.buscar {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+main {
+    width: 100%;
+}
+
+.pagina {
+    width: 100%;
+    background-color: white;
+}
+
+.hero {
+    width: 100%;
+    background-color: white;
+    border-bottom: 3px solid black;
+}
+
+.imagen-home {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.registro {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background-color: white;
+    gap: 20px;
+}
+
+.texto-registro {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.texto-registro strong {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.texto-registro span {
+    font-size: 15px;
+    color: #444;
+}
+
+.flecha-registro {
+    color: #ffd900;
+    font-size: 40px;
+    -webkit-text-stroke: 2px black;
+}
+
+.boton-registro {
+    background-color: #ffd900;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 14px 32px;
+    font-family: "Bangers", cursive;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 black;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.boton-registro:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 black;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    padding: 18px;
+    text-align: center;
+    font-size: 13px;
+    border-top: 2px solid #eee;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.activo {
+    display: flex;
+}
+
+.modal-box {
+    position: relative;
+    background-color: #3182ce;
+    border: 4px solid black;
+    border-radius: 12px;
+    padding: 35px 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 6px 6px 0 black;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.form-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-modal.oculto {
+    display: none;
+}
+
+.form-modal h2 {
+    font-family: "Bangers", cursive;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px black;
+}
+
+.form-modal input {
+    width: 100%;
+    padding: 12px 18px;
+    border: 3px solid black;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #ffd900;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: "Bangers", cursive;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 black;
+    margin-top: 5px;
+}
+
+.btn-submit:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 black;
+}
+
+.toggle-texto {
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    margin-top: 5px;
+}
+
+.toggle-texto a {
+    color: #ffd900;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.buscar {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.buscar:hover {
+    color: #ffd900;
+    transform: scale(1.1);
+}
+
+.buscar svg {
+    width: 22px;
+    height: 22px;
+}
+
+.contenido-historia {
+    padding: 30px 40px;
+}
+
+.cartel-titulo {
+    display: inline-block;
+    background-color: #ffd900;
+    border: 3.5px solid black;
+    padding: 8px 45px 8px 25px;
+    transform: rotate(-2deg);
+    box-shadow: 4px 4px 0 black;
+    margin-bottom: 35px;
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+}
+
+.cartel-titulo h1 {
+    font-family: "Bangers", cursive;
+    font-size: 48px;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.bloque-historia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.texto-historia {
+    flex: 1;
+    background-color: #ffffff;
+    border: 3.5px solid #000000;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 5px 5px 0 #000000;
+}
+
+.texto-historia h2 {
+    font-family: "Bangers", cursive;
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.texto-historia p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #111111;
+    font-weight: 600;
+}
+
+.imagen-contenedor {
+    width: 440px;
+    flex-shrink: 0;
+}
+
+.img-historia {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 3.5px solid #000000;
+    border-radius: 12px;
+    box-shadow: 5px 5px 0 #000000;
+}
+
+.contenido-historia {
+    padding: 30px 40px;
+    background-color: #fafafa;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.13) 18%, transparent 18%);
+    background-size: 14px 14px;
+    background-repeat: repeat;
+}
+
+.pos-relativa {
+    position: relative;
+    overflow: visible;
+}
+
+.sticker-explosion {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    font-size: 55px;
+    z-index: 10;
+    filter: drop-shadow(3px 3px 0 black);
+}
+
+.separador-seccion {
+    border: none;
+    border-top: 1.5px solid #e2e8f0;
+    margin: 35px 0;
+}
+
+.seccion-tarjetas {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.titulo-tarjetas {
+    font-family: "Bangers", cursive;
+    font-size: 30px;
+    color: black;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-pop {
+    border: 3.5px solid black;
+    border-radius: 12px;
+    padding: 25px 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 4px 4px 0 black;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-pop:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0 black;
+}
+
+.tarjeta-amarilla {
+    background-color: #ffd900;
+}
+
+.tarjeta-rosada {
+    background-color: #ff3377;
+    color: black;
+}
+
+.tarjeta-azul {
+    background-color: #0099ff;
+    color: black;
+}
+
+.icono-tarjeta {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.icono-tarjeta svg {
+    width: 100%;
+    height: 100%;
+    stroke: black;
+}
+
+.tarjeta-pop h3 {
+    font-family: "Bangers", cursive;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    color: black;
+    line-height: 1.1;
+}
+
+.tarjeta-pop p {
+    font-size: 14px;
+    line-height: 1.35;
+    font-weight: 600;
+    color: black;
+}
+
+.footer-pop {
+    width: 100%;
+    background-color: #0088e6;
+    background-image: radial-gradient(black 20%, transparent 20%);
+    background-size: 10px 10px;
+    border-top: 3.5px solid black;
+    color: white;
+    padding: 25px 40px 15px 40px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 15px 25px;
+    box-shadow: 4px 4px 0 black;
+    max-width: 450px;
+    margin: 0 auto;
+    /* Centra el bloque */
+}
+
+.footer-marca .logo-texto {
+    font-family: "Bangers", cursive;
+    font-size: 26px;
+    background-color: #ffd900;
+    padding: 2px 12px;
+    border: 2px solid black;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.footer-marca p {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.intro-tecnicas {
+    margin-bottom: 30px;
+}
+
+/* Grid layout similar al wireframe */
+.grid-tecnicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card-tecnica.ancho-doble {
+    grid-column: span 2;
+}
+
+/* Tarjeta individual */
+.card-tecnica {
+    border: 3.5px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 5px 5px 0 black;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-tecnica:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0 black;
+}
+
+.header-card {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3.5px solid black;
+}
+
+/* Colores de las cabeceras */
+.tarjeta-rosada .header-card {
+    background-color: #ff3377;
+}
+
+.tarjeta-amarilla .header-card {
+    background-color: #ffd900;
+}
+
+.tarjeta-azul .header-card {
+    background-color: #0099ff;
+}
+
+.icono-svg {
+    width: 60px;
+    height: 60px;
+    stroke: black;
+}
+
+.body-card {
+    padding: 20px;
+    background-color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-card h2 {
+    font-family: "Bangers", cursive;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.body-card p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #222;
+    font-weight: 600;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.modal-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-popart {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 12px;
+    box-shadow: 10px 10px 0 black;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.8);
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay.activo .modal-popart {
+    transform: scale(1);
+}
+
+.cerrar-popart {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background-color: white;
+    border: 3px solid black;
+    font-family: "Bangers", cursive;
+    font-size: 22px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 black;
+    z-index: 10;
+    line-height: 1;
+}
+
+.cerrar-popart:hover {
+    background-color: #ffd900;
+}
+
+.modal-popart-header {
+    padding: 25px 20px;
+    border-bottom: 4px solid black;
+    background-color: #ffd900;
+    text-align: center;
+}
+
+.modal-popart-header h2 {
+    font-family: "Bangers", cursive;
+    font-size: 36px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.modal-popart-body {
+    padding: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #111;
+}
+
+.modal-popart-body p {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.modal-extra-info {
+    background-color: #f7f3e8;
+    border: 2.5px solid black;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 3px 3px 0 black;
+}
+
+
+.banner-obras {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+
+.banner-decoracion {
+    flex: 1;
+    max-height: 110px;
+    border: 3.5px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 4px 4px 0 black;
+}
+
+.banner-decoracion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.grid-obras-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 45px;
+}
+
+.card-obra {
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 4px 4px 0 black;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.img-container-obra {
+    width: 100%;
+    height: 280px;
+    background-color: #f0f0f0;
+    border-bottom: 3.5px solid black;
+    overflow: hidden;
+}
+
+.img-container-obra img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+
+.info-obra {
+    padding: 12px 14px;
+    background-color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    flex-grow: 1;
+}
+
+.info-obra h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #111111;
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+}
+
+.info-obra p {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666666;
+    margin: 0;
+    line-height: 1.35;
+}
+
+.item-galeria {
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 4px 4px 0 black;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wrap-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.wrap-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.item-galeria:hover .wrap-img img {
+    transform: scale(1.05);
+}
+
+.etiqueta-obra {
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-foto {
+    font-weight: 800;
+    font-size: 14px;
+    color: black;
+    line-height: 1.2;
+}
+
+.sub-foto {
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+}
+
+.modal-visor {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.modal-visor.activo {
+    display: flex;
+}
+
+.imagen-agrandada {
+    max-width: 85%;
+    max-height: 80vh;
+    border: 4px solid white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+.epigrafe-modal {
+    margin-top: 15px;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    background-color: black;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.cerrar-modal:hover {
+    color: #ffd900;
+}
+
+.subtitulo-galeria {
+    font-family: "Bangers", cursive;
+    font-size: 32px;
+    color: black;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.barra-filtros {
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 6px;
+    box-shadow: 4px 4px 0 black;
+    margin-bottom: 25px;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    background: none;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-filtro.activo,
+.btn-filtro:hover {
+    background-color: #ffd900;
+    box-shadow: 2px 2px 0 black;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.item-galeria.oculto {
+    display: none !important;
+}
+
+.pagina {
+    background-color: #f4f4f4;
+    background-image: radial-gradient(#b5b5b5 1.5px, transparent 1.5px);
+    background-size: 16px 16px;
+    padding: 30px 20px;
+}
+
+/* TITULO DE LA GALERÍA */
+.subtitulo-galeria {
+    font-family: 'Bangers', cursive;
+    font-size: 38px;
+    letter-spacing: 1.5px;
+    background-color: #ffd900;
+    display: inline-block;
+    padding: 6px 18px;
+    border: 3.5px solid black;
+    box-shadow: 4px 4px 0 black;
+    transform: rotate(-1deg);
+    margin-bottom: 25px;
+}
+
+/* BARRA DE FILTROS */
+.barra-filtros {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.btn-filtro {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 black;
+    transition: all 0.15s ease;
+}
+
+.btn-filtro:hover,
+.btn-filtro.activo {
+    background-color: #ffd900;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 black;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.item-galeria {
+    background-color: white;
+    border: 3.5px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 black;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-galeria:hover {
+    transform: translateY(-4px);
+    box-shadow: 7px 7px 0 black;
+}
+
+.item-galeria.oculto {
+    display: none !important;
+}
+
+.wrap-img {
+    width: 100%;
+    height: 220px;
+    background-color: #eee;
+    border-bottom: 3.5px solid black;
+    overflow: hidden;
+}
+
+.wrap-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.etiqueta-obra {
+    padding: 14px;
+    background-color: white;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.titulo-foto {
+    display: block;
+    font-size: 16px;
+    font-weight: 800;
+    color: black;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.sub-foto {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+}
+
+.modal-visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal-visor.activo {
+    display: flex;
+}
+
+.imagen-agrandada {
+    max-width: 90%;
+    max-height: 75vh;
+    border: 4px solid black;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0 #ffd900;
+    object-fit: contain;
+}
+
+.epigrafe-modal {
+    margin-top: 15px;
+    color: white;
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pagina-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 75vh;
+    background-image: radial-gradient(#e01d3b 20%, transparent 20%);
+    background-size: 18px 18px;
+    background-color: #fafafa;
+}
+
+
+.contenedor-contacto-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+}
+
+.banner-contacto {
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.subtitulo-pop {
+    font-family: 'Bangers', cursive;
+    font-size: 44px;
+    letter-spacing: 2px;
+    background-color: #ffd900;
+    padding: 8px 35px;
+    border: 3.5px solid black;
+    box-shadow: 6px 6px 0 black;
+    transform: rotate(-2deg);
+    display: inline-block;
+}
+
+
+.tarjeta-formulario-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+.tarjeta-formulario {
+    position: relative;
+    z-index: 2;
+    background-color: #f2f2f2;
+    border: 3.5px solid black;
+    border-radius: 25px;
+    padding: 35px;
+    width: 100%;
+    box-shadow: 8px 8px 0 black;
+    box-sizing: border-box;
+}
+
+/* DECORACIÓN: DESTELLO O RÁFAGA POP ART DETRÁS DE LA TARJETA */
+.destello-pop {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: #00bcd4;
+    border: 3.5px solid black;
+    border-radius: 30px;
+    transform: rotate(-1.5deg);
+    z-index: 1;
+    box-shadow: 6px 6px 0 black;
+}
+
+
+.pop-sticker {
+    position: absolute;
+    font-family: 'Bangers', cursive;
+    border: 3px solid black;
+    padding: 6px 14px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 black;
+    z-index: 3;
+    user-select: none;
+}
+
+.sticker-pow {
+    top: -18px;
+    right: -25px;
+    background-color: #ff3366;
+    color: white;
+    font-size: 22px;
+    transform: rotate(12deg);
+}
+
+.sticker-boom {
+    bottom: -15px;
+    left: -25px;
+    background-color: #ffd900;
+    color: black;
+    font-size: 20px;
+    transform: rotate(-10deg);
+}
+
+
+.campo-form {
+    margin-bottom: 20px;
+}
+
+.campo-form input,
+.campo-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2.5px solid #333;
+    border-radius: 12px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    outline: none;
+    background-color: white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    border-color: black;
+    box-shadow: 3px 3px 0 #ffd900;
+}
+
+.btn-enviar-pop {
+    width: 100%;
+    background-color: #ffd900;
+    color: black;
+    font-family: 'Bangers', cursive;
+    font-size: 22px;
+    letter-spacing: 1px;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-enviar-pop:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0 black;
+}
+
+.btn-enviar-pop:active {
+    transform: translateY(1px);
+    box-shadow: 2px 2px 0 black;
+}
+
+
+.mensaje-estado {
+    margin-top: 18px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+    border: 2.5px solid black;
+}
+
+.mensaje-estado.error {
+    display: block;
+    background-color: #ff4d4d;
+    color: white;
+    box-shadow: 3px 3px 0 black;
+}
+
+.mensaje-estado.exito {
+    display: block;
+    background-color: #2ecc71;
+    color: white;
+    box-shadow: 3px 3px 0 black;
+}

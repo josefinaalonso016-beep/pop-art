@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referentes - Pop Art</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor-web">
+
+
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo Pop Art">
+            </a>
+
+            <nav class="menu">
+                <a href="index.html">inicio</a>
+                <a href="historia.html">historia</a>
+                <a href="arte-y-tecnicas.html">arte y técnicas</a>
+                <a href="referentes.html" class="activo">referentes</a>
+                <a href="galeria.html">galería</a>
+                <a href="contacto.html">contacto</a>
+            </nav>
+
+            <button class="buscar" aria-label="Buscar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </header>
+
+
+        <main class="contenido-historia">
+
+
+            <div class="cartel-titulo">
+                <h1>REFERENTES</h1>
+            </div>
+
+
+            <section class="grid-obras-top">
+
+
+                <article class="card-obra">
+                    <div class="img-container-obra">
+                        <img src="img/andy-warhol.jpg" alt="Andy Warhol">
+                    </div>
+                    <div class="info-obra">
+                        <h3>Andy Warhol</h3>
+                        <p class="autor-obra">El máximo exponente y la figura más famosa del Pop Art a nivel mundial.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="card-obra">
+                    <div class="img-container-obra">
+                        <img src="img/roy-lichtenstein.jpg" alt="Roy Lichtenstein">
+                    </div>
+                    <div class="info-obra">
+                        <h3>Roy Lichtenstein</h3>
+                        <p class="autor-obra">Un pintor estadounidense famoso por llevar el lenguaje del cómic al mundo
+                            del arte fino.</p>
+                    </div>
+                </article>
+
+
+                <article class="card-obra">
+                    <div class="img-container-obra">
+                        <img src="img/keith-haring.jpg" alt="Keith Haring">
+                    </div>
+                    <div class="info-obra">
+                        <h3>Keith Haring</h3>
+                        <p class="autor-obra"> Un artista y activista estadounidense que se convirtió en un ícono de la
+                            cultura urbana de Nueva York en los años 80.</p </div>
+                </article>
+
+
+                <article class="card-obra">
+                    <div class="img-container-obra">
+                        <img src="img/robert-rauschenberg.jpg" alt="Robert Rauschenberg">
+                    </div>
+                    <div class="info-obra">
+                        <h3>Robert Rauschenberg</h3>
+                        <p class="autor-obra">Una figura clave en la transición del expresionismo abstracto al Pop Art.
+                        </p>
+                    </div>
+                </article>
+
+            </section>
+
+
+            <section class="seccion-galeria-filtrable">
+
+                <h2 class="subtitulo-galeria">GALERÍA DE OBRAS</h2>
+
+                <div class="barra-filtros">
+                    <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+                    <button class="btn-filtro" data-filtro="warhol">Andy Warhol</button>
+                    <button class="btn-filtro" data-filtro="lichtenstein">Roy Lichtenstein</button>
+                    <button class="btn-filtro" data-filtro="haring">Keith Haring</button>
+                    <button class="btn-filtro" data-filtro="rauschenberg">Robert Rauschenberg</button>
+                </div>
+
+
+                <div class="grid-galeria" id="gridGaleria">
+
+
+                    <div class="item-galeria warhol">
+                        <div class="wrap-img">
+                            <img src="img/warhol-obra1.jpg" alt="Marilyn Monroe - Andy Warhol">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Marilyn Monroe</span>
+                            <span class="sub-foto">Andy Warhol</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item-galeria warhol">
+                        <div class="wrap-img">
+                            <img src="img/warhol-obra2.jpg" alt="Lata de Sopa Campbell's - Andy Warhol">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Sopa Campbell's</span>
+                            <span class="sub-foto">Andy Warhol</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria warhol">
+                        <div class="wrap-img">
+                            <img src="img/warhol-liz.jpg" alt="Liz Taylor - Andy Warhol">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Liz Taylor</span>
+                            <span class="sub-foto">Andy Warhol</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria lichtenstein">
+                        <div class="wrap-img">
+                            <img src="img/lichtenstein-obra1.jpg" alt="Look Mickey - Roy Lichtenstein">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Look Mickey</span>
+                            <span class="sub-foto">Roy Lichtenstein</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria lichtenstein">
+                        <div class="wrap-img">
+                            <img src="img/lichtenstein-obra2.jpg" alt="Girl with Hair Ribbon - Roy Lichtenstein">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Girl with Ribbon</span>
+                            <span class="sub-foto">Roy Lichtenstein</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria lichtenstein">
+                        <div class="wrap-img">
+                            <img src="img/lichtenstein-crying-girl.jpg" alt="Crying Girl - Roy Lichtenstein">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Crying Girl</span>
+                            <span class="sub-foto">Roy Lichtenstein</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria haring">
+                        <div class="wrap-img">
+                            <img src="img/haring-obra1.jpg" alt="Barking Dog - Keith Haring">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Barking Dog</span>
+                            <span class="sub-foto">Keith Haring</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria haring ancho-completo">
+                        <div class="wrap-img">
+                            <img src="img/haring-obra2.jpg" alt="Radiant Baby - Keith Haring">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Radiant Baby</span>
+                            <span class="sub-foto">Keith Haring</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria haring">
+                        <div class="wrap-img">
+                            <img src="img/haring-pop-shop.jpg" alt="Pop Shop III - Keith Haring">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Pop Shop III</span>
+                            <span class="sub-foto">Keith Haring</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria rauschenberg">
+                        <div class="wrap-img">
+                            <img src="img/rauschenberg-obra1.jpg" alt="Canyon - Robert Rauschenberg">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Canyon</span>
+                            <span class="sub-foto">Robert Rauschenberg</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria rauschenberg">
+                        <div class="wrap-img">
+                            <img src="img/rauschenberg-obra2.jpg" alt="Retroactive I - Robert Rauschenberg">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Retroactive I</span>
+                            <span class="sub-foto">Robert Rauschenberg</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="footer-pop">
+            <div class="footer-contenido">
+                <div class="footer-marca">
+                    <span class="logo-texto">POP ART</span>
+                    <p>El arte de transformar lo cotidiano en icono.</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 Pop Art</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="modal-visor" id="modalVisor">
+        <span class="cerrar-modal" id="cerrarModal">&times;</span>
+        <img class="imagen-agrandada" id="imgModal" src="" alt="Obra ampliada">
+        <div class="epigrafe-modal" id="captionModal"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
