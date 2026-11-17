@@ -19,95 +19,131 @@
 
     <div class="contenedor-web">
 
-
         <header class="header">
             <a href="index.html" class="logo">
                 <img src="img/logo.png" alt="Logo Pop Art">
             </a>
 
             <nav class="menu">
-                <a href="index.html">inicio</a>
-                <a href="historia.html">historia</a>
-                <a href="arte-y-tecnicas.html">arte y técnicas</a>
-                <a href="referentes.html">referentes</a>
-                <a href="galeria.html">galería</a>
-                <a href="contacto.html" class="activo">contacto</a>
+                <a href="index.html">INICIO</a>
+                <a href="historia.html">HISTORIA</a>
+                <a href="arte-y-tecnicas.html">ARTE Y TÉCNICAS</a>
+                <a href="artistas.html">ARTISTAS</a>
+                <a href="galeria.html">GALERÍA</a>
+                <a href="contacto.html" class="activo">CONTACTO</a>
             </nav>
 
-            <button class="buscar" aria-label="Buscar" id="btnAbrirModal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </button>
-        </header>
 
+        </header>
 
         <main>
             <section class="pagina pagina-contacto">
 
-                <div class="contenedor-contacto-central">
+                <div class="contacto-layout">
 
-                    <div class="banner-contacto">
-                        <h2 class="subtitulo-pop">CONTACTO</h2>
+
+                    <div class="contenedor-contacto-central">
+
+                        <div class="banner-contacto">
+                            <h2 class="subtitulo-pop">CONTACTO</h2>
+                        </div>
+
+                        <div class="tarjeta-formulario-wrapper">
+
+                            <div class="pop-decoracion destello-pop"></div>
+                            <div class="pop-sticker sticker-pow">POW!</div>
+                            <div class="pop-sticker sticker-boom">BOOM!</div>
+
+                            <div class="tarjeta-formulario">
+
+                                <form id="formContacto" action="enviar.php" method="POST">
+
+                                    <div class="campo-form">
+                                        <input type="text" id="nombreContacto" name="nombre" placeholder="Tu nombre"
+                                            required>
+                                    </div>
+
+                                    <div class="campo-form">
+                                        <input type="email" id="emailContacto" name="email" placeholder="Tu email"
+                                            required>
+                                    </div>
+
+                                    <div class="campo-form">
+                                        <textarea id="mensajeContacto" name="mensaje" rows="5"
+                                            placeholder="Tu mensaje..." required></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn-enviar-pop">
+                                        <span>ENVIAR</span>
+                                    </button>
+
+                                    <div id="mensajeEstado" class="mensaje-estado"></div>
+
+                                </form>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="tarjeta-formulario-wrapper">
 
-                        <div class="pop-decoracion destello-pop"></div>
-                        <div class="pop-sticker sticker-pow">POW!</div>
-                        <div class="pop-sticker sticker-boom">BOOM!</div>
-
-                        <div class="tarjeta-formulario">
-                            <form id="formContacto" novalidate>
-
-                                <div class="campo-form">
-                                    <input type="text" id="nombreContacto" placeholder="Tu nombre">
-                                </div>
-
-                                <div class="campo-form">
-                                    <input type="email" id="emailContacto" placeholder="Tu email">
-                                </div>
-
-                                <div class="campo-form">
-                                    <textarea id="mensajeContacto" rows="5" placeholder="Tu mensaje..."></textarea>
-                                </div>
-
-                                <button type="submit" class="btn-enviar-pop">
-                                    <span>ENVIAR</span>
-                                </button>
-
-                                <!-- MOVIDO ACÁ: Los mensajes de error o éxito aparecerán debajo del botón -->
-                                <div id="mensajeEstado" class="mensaje-estado"></div>
-
-                            </form>
+                    <div class="contacto-fotos">
+                        <div class="foto-contacto foto-contacto-1">
+                            <img src="img/contacto-1.jpg" alt="Obra Pop Art">
+                        </div>
+                        <div class="foto-contacto foto-contacto-2">
+                            <img src="img/contacto-2.jpg" alt="Obra Pop Art">
                         </div>
                     </div>
 
                 </div>
 
-    </div>
+            </section>
+        </main>
 
-    </section>
-    </main>
-
-
-    <footer class="footer-pop">
-        <div class="footer-contenido">
-            <div class="footer-marca">
-                <span class="logo-texto">POP ART</span>
-                <p>El arte de transformar lo cotidiano en icono.</p>
+        <footer class="footer-pop">
+            <div class="footer-contenido">
+                <div class="footer-marca">
+                    <span class="logo-texto">POP ART</span>
+                    <p>El arte de transformar lo cotidiano en icono.</p>
+                </div>
             </div>
-        </div>
-        <div class="footer-copy">
-            <p>© 2026 Pop Art</p>
-        </div>
-    </footer>
+            <div class="footer-copy">
+                <p>© 2026 Pop Art</p>
+            </div>
+        </footer>
 
     </div>
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const estado = parametros.get("estado");
+        const mensaje = document.getElementById("mensajeEstado");
 
-    <script src="script.js"></script>
+        if (estado && mensaje) {
+
+            if (estado === "exito") {
+                mensaje.textContent = "¡Tu mensaje se envió correctamente!";
+                mensaje.className = "mensaje-estado exito";
+            }
+
+            else if (estado === "email_invalido") {
+                mensaje.textContent = "El correo electrónico no es válido. Revisalo.";
+                mensaje.className = "mensaje-estado error";
+            }
+
+            else if (estado === "faltan_datos") {
+                mensaje.textContent = "Completá todos los campos.";
+                mensaje.className = "mensaje-estado error";
+            }
+
+            else if (estado === "error") {
+                mensaje.textContent = "Hubo un problema al enviar el mensaje.";
+                mensaje.className = "mensaje-estado error";
+            }
+
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
+
 
 </body>
 

@@ -25,21 +25,15 @@
             </a>
 
             <nav class="menu">
-                <a href="index.html" class="activo">inicio</a>
-                <a href="historia.html">historia</a>
-                <a href="arte-y-tecnicas.html">arte y técnicas</a>
-                <a href="referentes.html">referentes</a>
-                <a href="galeria.html">galería</a>
-                <a href="contacto.html">contacto</a>
+                <a href="index.html" class="activo">INICIO</a>
+                <a href="historia.html">HISTORIA</a>
+                <a href="arte-y-tecnicas.html">ARTE Y TÉCNICAS</a>
+                <a href="artistas.html">ARTISTAS</a>
+                <a href="galeria.html">GALERÍA</a>
+                <a href="contacto.html">CONTACTO</a>
             </nav>
 
-            <button class="buscar" aria-label="Buscar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </button>
+
 
         </header>
 
@@ -62,7 +56,60 @@
 
                     <button class="boton-registro" id="btnAbrirModal">INICIAR SESIÓN</button>
                 </section>
+                <section class="estilo-pop">
 
+                    <h2>EL ESTILO POP</h2>
+
+                    <div class="grid-estilo">
+
+                        <div class="item-estilo amarillo">
+                            <span class="numero">01</span>
+                            <h3>COLORES VIBRANTES</h3>
+                        </div>
+
+                        <div class="item-estilo rosa">
+                            <span class="numero">02</span>
+                            <h3>CULTURA POPULAR</h3>
+                        </div>
+
+                        <div class="item-estilo azul">
+                            <span class="numero">03</span>
+                            <h3>REPETICIÓN</h3>
+                        </div>
+
+                        <div class="item-estilo blanco">
+                            <span class="numero">04</span>
+                            <h3>ESTÉTICA CÓMIC</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="historia-pop">
+
+                        <h2>UN MOVIMIENTO QUE HIZO HISTORIA</h2>
+
+                        <div class="linea-tiempo">
+
+                            <div class="momento">
+                                <span>50's</span>
+                                <p>Sus comienzos</p>
+                            </div>
+
+                            <div class="momento">
+                                <span>60's</span>
+                                <p>Su expansión</p>
+                            </div>
+
+                            <div class="momento">
+                                <span>HOY</span>
+                                <p>Su influencia</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
             </section>
         </main>
 
@@ -83,25 +130,46 @@
 
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-box">
+
             <button class="modal-close" id="btnCerrarModal">✕</button>
 
-
-            <form class="form-modal" id="formLogin">
+            <form class="form-modal" id="formLogin" action="login.php" method="POST">
                 <h2>INICIAR SESIÓN</h2>
-                <input type="email" placeholder="Correo electrónico" required>
-                <input type="password" placeholder="Contraseña" required>
+                <p id="errorLogin" class="mensaje-error"></p>
+
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+
+                <input type="password" name="password" placeholder="Contraseña" required>
+
                 <button type="submit" class="btn-submit">ENTRAR</button>
-                <p class="toggle-texto">¿No tenés cuenta? <a href="#" id="linkIrARegistro">Registrate acá</a></p>
+
+                <p class="toggle-texto">
+                    ¿No tenés cuenta?
+                    <a href="#" id="linkIrARegistro">Registrate acá</a>
+                </p>
             </form>
 
-            <form class="form-modal oculto" id="formRegistro">
+            <form class="form-modal oculto" id="formRegistro" action="registro.php" method="POST">
                 <h2>CREAR CUENTA</h2>
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <input type="password" placeholder="Contraseña" required>
+
+                <input type="text" name="nombre" placeholder="Nombre" required>
+
+                <input type="text" name="apellido" placeholder="Apellido" required>
+
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+
+                <input type="text" name="usuario" placeholder="Nombre de usuario" maxlength="12" required>
+
+                <input type="password" name="password" placeholder="Contraseña" maxlength="72" required>
+
                 <button type="submit" class="btn-submit">REGISTRARME</button>
-                <p class="toggle-texto">¿Ya tenés cuenta? <a href="#" id="linkIrALogin">Iniciá sesión</a></p>
+
+                <p class="toggle-texto">
+                    ¿Ya tenés cuenta?
+                    <a href="#" id="linkIrALogin">Iniciá sesión</a>
+                </p>
             </form>
+
         </div>
     </div>
 

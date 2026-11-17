@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas - Pop Art</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor-web">
+
+
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo Pop Art">
+            </a>
+
+            <nav class="menu">
+                <a href="index.html">INICIO</a>
+                <a href="historia.html">HISTORIA</a>
+                <a href="arte-y-tecnicas.html">ARTE Y TÉCNICAS</a>
+                <a href="artistas.html" class="activo">ARTISTAS</a>
+                <a href="galeria.html">GALERÍA</a>
+                <a href="contacto.html">CONTACTO</a>
+            </nav>
+
+            <form action="resultados_buscar.php" method="POST" class="buscador-header">
+
+                <input type="text" name="buscar" class="input-buscar" placeholder="Buscar..." required>
+
+                <button type="submit" class="buscar" aria-label="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+
+            </form>
+
+        </header>
+
+
+        <main class="contenido-historia">
+
+
+            <div class="cartel-titulo">
+                <h1>artistas</h1>
+            </div>
+
+
+            <section class="grid-obras-top">
+
+
+                <article class="card-obra">
+                    <div class="img-container-obra">
+                        <img src="img/andy-warhol.jpg" alt="Andy Warhol">
+                    </div>
+                    <div class="info-obra">
+                        <h3>Andy Warhol</h3>
+                        <p class="autor-obra">El máximo exponente y la figura más famosa del Pop Art a nivel mundial.
+                        </p>
+                        <button class="btn-mas-info">MÁS INFO <span>➜</span></button>
+                    </div>
+
+                    <div class="artista-detalle" data-color="#ffd900" hidden>
+                        <h2>ANDY WARHOL</h2>
+                        <p class="artista-rol">Pintor, cineasta y productor · Estados Unidos</p>
+
+                        <div class="artista-fichas">
+                            <div class="artista-ficha"><span>NACIÓ</span><strong>6 de agosto de 1928,
+                                    Pittsburgh</strong></div>
+                            <div class="artista-ficha"><span>FALLECIÓ</span><strong>22 de febrero de 1987, Nueva
+                                    York</strong></div>
+                            <div class="artista-ficha"><span>TÉCNICA</span><strong>Serigrafía sobre lienzo</strong>
+                            </div>
+                            <div class="artista-ficha"><span>SU TALLER</span><strong>The Factory</strong></div>
+                        </div>
+
+                        <div class="artista-bio">
+                            <p>Hijo de inmigrantes de la actual Eslovaquia, empezó como ilustrador publicitario en
+                                Nueva York en los años 50, dibujando avisos para revistas de moda. Esa mirada
+                                comercial marcó toda su obra.</p>
+                            <p>A partir de 1962 usó la serigrafía para reproducir fotografías de celebridades y
+                                productos de consumo, con colores planos y repetición. En su estudio, The Factory,
+                                trabajaba como en una fábrica: producía obras en serie y desafiaba la idea del
+                                artista como genio solitario.</p>
+                            <p>También fue cineasta, fundó la revista Interview y produjo a la banda The Velvet
+                                Underground.</p>
+                        </div>
+
+                        <ul class="artista-obras">
+                            <li>
+                                <strong>Campbell's Soup Cans</strong><span class="obra-anio">1962</span>
+                                <p>32 lienzos, uno por cada sabor de sopa que vendía la marca.</p>
+                            </li>
+                            <li>
+                                <strong>Marilyn Diptych</strong><span class="obra-anio">1962</span>
+                                <p>50 imágenes de Marilyn Monroe, realizadas poco después de su muerte.</p>
+                            </li>
+                            <li>
+                                <strong>Green Coca-Cola Bottles</strong><span class="obra-anio">1962</span>
+                                <p>La repetición de un objeto cotidiano convertido en obra de arte.</p>
+                            </li>
+                            <li>
+                                <strong>Liz Taylor</strong><span class="obra-anio">1963</span>
+                                <p>Serie de retratos de la actriz Elizabeth Taylor en colores intensos.</p>
+                            </li>
+                        </ul>
+
+                        <p class="artista-curiosidad"> Se le atribuye la frase «En el futuro, todos serán famosos
+                            mundialmente por 15 minutos».</p>
+                    </div>
+                </article>
+
+
+
+                <article class="card-obra">
+                    <div class="img-container-obra">
+                        <img src="img/roy-lichtenstein.jpg" alt="Roy Lichtenstein">
+                    </div>
+                    <div class="info-obra">
+                        <h3>Roy Lichtenstein</h3>
+                        <p class="autor-obra">Un pintor estadounidense famoso por llevar el lenguaje del cómic al mundo
+                            del arte fino.</p>
+                        <button class="btn-mas-info">MÁS INFO <span>➜</span></button>
+                    </div>
+
+                    <div class="artista-detalle" data-color="#0099ff" hidden>
+                        <h2>ROY LICHTENSTEIN</h2>
+                        <p class="artista-rol">Pintor y escultor · Estados Unidos</p>
+
+                        <div class="artista-fichas">
+                            <div class="artista-ficha"><span>NACIÓ</span><strong>27 de octubre de 1923, Nueva
+                                    York</strong></div>
+                            <div class="artista-ficha"><span>FALLECIÓ</span><strong>29 de septiembre de 1997, Nueva
+                                    York</strong></div>
+                            <div class="artista-ficha"><span>TÉCNICA</span><strong>Puntos Ben-Day y contornos
+                                    negros</strong></div>
+                            <div class="artista-ficha"><span>TEMAS</span><strong>Cómics y publicidad</strong></div>
+                        </div>
+
+                        <div class="artista-bio">
+                            <p>Estudió en la Universidad Estatal de Ohio, sirvió en el ejército durante la Segunda
+                                Guerra Mundial y dio clases durante años mientras pintaba en estilo expresionista
+                                abstracto. Recién a comienzos de los 60 encontró su sello personal.</p>
+                            <p>En 1961 pintó Look Mickey, considerada su primera obra Pop. Desde entonces tomó viñetas
+                                de cómics románticos y bélicos y las agrandó a gran escala, imitando el reticulado de
+                                puntos de la imprenta, los contornos negros gruesos y los colores primarios. Parecía
+                                impreso, pero estaba hecho a mano.</p>
+                        </div>
+
+                        <ul class="artista-obras">
+                            <li>
+                                <strong>Look Mickey</strong><span class="obra-anio">1961</span>
+                                <p>Considerada su primera obra Pop, con Mickey y el Pato Donald.</p>
+                            </li>
+                            <li>
+                                <strong>Whaam!</strong><span class="obra-anio">1963</span>
+                                <p>Escena de combate aéreo basada en un cómic de guerra. Se exhibe en la Tate Modern
+                                    de Londres.</p>
+                            </li>
+                            <li>
+                                <strong>Crying Girl</strong><span class="obra-anio">1963</span>
+                                <p>Una mujer llorando, tomada de un cómic romántico.</p>
+                            </li>
+                            <li>
+                                <strong>Girl with Hair Ribbon</strong><span class="obra-anio">1965</span>
+                                <p>Retrato de una joven rubia con el estilo característico del cómic.</p>
+                            </li>
+                        </ul>
+
+                        <p class="artista-curiosidad"> Los puntos Ben-Day deben su nombre al ilustrador Benjamin
+                            Day, que patentó el método en el siglo XIX para abaratar la impresión.</p>
+                    </div>
+                </article>
+
+
+                <!-- =====================================================
+                     KEITH HARING
+                     ===================================================== -->
+                <article class="card-obra">
+                    <div class="img-container-obra">
+                        <img src="img/keith-haring.jpg" alt="Keith Haring">
+                    </div>
+                    <div class="info-obra">
+                        <h3>Keith Haring</h3>
+                        <p class="autor-obra">Un artista y activista estadounidense que se convirtió en un ícono de la
+                            cultura urbana de Nueva York en los años 80.</p>
+                        <button class="btn-mas-info">MÁS INFO <span>➜</span></button>
+                    </div>
+
+                    <div class="artista-detalle" data-color="#ff3377" hidden>
+                        <h2>KEITH HARING</h2>
+                        <p class="artista-rol">Artista y activista · Estados Unidos</p>
+
+                        <div class="artista-fichas">
+                            <div class="artista-ficha"><span>NACIÓ</span><strong>4 de mayo de 1958, Reading
+                                    (Pensilvania)</strong></div>
+                            <div class="artista-ficha"><span>FALLECIÓ</span><strong>16 de febrero de 1990, Nueva
+                                    York</strong></div>
+                            <div class="artista-ficha"><span>TÉCNICA</span><strong>Líneas gruesas con tiza y
+                                    marcador</strong></div>
+                            <div class="artista-ficha"><span>ESTILO</span><strong>Arte urbano</strong></div>
+                        </div>
+
+                        <div class="artista-bio">
+                            <p>Se mudó a Nueva York en 1978 para estudiar en la School of Visual Arts. A comienzos de
+                                los años 80 empezó a dibujar con tiza blanca sobre los paneles negros vacíos de
+                                publicidad del subte: miles de personas veían sus dibujos todos los días sin tener que
+                                ir a un museo.</p>
+                            <p>Su lenguaje es inconfundible: figuras simples, líneas gruesas, colores planos y mucho
+                                movimiento. Sus personajes, como el bebé radiante o el perro ladrando, se volvieron
+                                íconos de la cultura urbana. En 1986 abrió el Pop Shop en Nueva York, donde vendía
+                                remeras, pósters y objetos con sus diseños a precios accesibles.</p>
+                            <p>También fue activista: pintó obras contra el crack y el apartheid y, tras ser
+                                diagnosticado con VIH en 1988, creó obras para concientizar sobre el sida. En 1989
+                                fundó la Keith Haring Foundation.</p>
+                        </div>
+
+                        <ul class="artista-obras">
+                            <li>
+                                <strong>Dibujos del subte</strong><span class="obra-anio">Años 80</span>
+                                <p>Cientos de dibujos con tiza en las estaciones de Nueva York.</p>
+                            </li>
+                            <li>
+                                <strong>Radiant Baby</strong><span class="obra-anio">Años 80</span>
+                                <p>Su símbolo más famoso: un bebé gateando rodeado de rayos.</p>
+                            </li>
+                            <li>
+                                <strong>Crack Is Wack</strong><span class="obra-anio">1986</span>
+                                <p>Mural contra el consumo de crack, pintado en un muro de Nueva York.</p>
+                            </li>
+                            <li>
+                                <strong>Pop Shop</strong><span class="obra-anio">Fines de los 80</span>
+                                <p>Serie de serigrafías vinculadas a su tienda de objetos y diseños.</p>
+                            </li>
+                        </ul>
+
+                        <p class="artista-curiosidad"> Murió a los 31 años, pero dejó más de 50 obras públicas en
+                            ciudades de todo el mundo.</p>
+                    </div>
+                </article>
+
+
+                <!-- =====================================================
+                     ROBERT RAUSCHENBERG
+                     ===================================================== -->
+                <article class="card-obra">
+                    <div class="img-container-obra">
+                        <img src="img/robert-rauschenberg.jpg" alt="Robert Rauschenberg">
+                    </div>
+                    <div class="info-obra">
+                        <h3>Robert Rauschenberg</h3>
+                        <p class="autor-obra">Una figura clave en la transición del expresionismo abstracto al Pop Art.
+                        </p>
+                        <button class="btn-mas-info">MÁS INFO <span>➜</span></button>
+                    </div>
+
+                    <div class="artista-detalle" data-color="#00bcd4" hidden>
+                        <h2>ROBERT RAUSCHENBERG</h2>
+                        <p class="artista-rol">Artista plástico · Estados Unidos</p>
+
+                        <div class="artista-fichas">
+                            <div class="artista-ficha"><span>NACIÓ</span><strong>22 de octubre de 1925, Port Arthur
+                                    (Texas)</strong></div>
+                            <div class="artista-ficha"><span>FALLECIÓ</span><strong>12 de mayo de 2008, Florida</strong>
+                            </div>
+                            <div class="artista-ficha"><span>TÉCNICA</span><strong>«Combines» y serigrafía sobre
+                                    lienzo</strong></div>
+                            <div class="artista-ficha"><span>SU ROL</span><strong>Puente entre el Expresionismo
+                                    Abstracto y el Pop</strong></div>
+                        </div>
+
+                        <div class="artista-bio">
+                            <p>Estudió en el Black Mountain College con Josef Albers y se movió en Nueva York junto a
+                                artistas como Jasper Johns, el compositor John Cage y el coreógrafo Merce Cunningham.
+                                En 1953 borró un dibujo de Willem de Kooning para crear «Erased de Kooning Drawing».
+                            </p>
+                            <p>En los años 50 inventó los «Combines»: obras que mezclan pintura y escultura e
+                                incorporan objetos encontrados, como almohadas, neumáticos o animales embalsamados.
+                                Rompió así la frontera entre el arte y las cosas cotidianas y abrió el camino para el
+                                Pop.</p>
+                            <p>A partir de 1962 empezó a transferir fotos de revistas y noticias a sus lienzos
+                                mediante serigrafía.</p>
+                        </div>
+
+                        <ul class="artista-obras">
+                            <li>
+                                <strong>Bed</strong><span class="obra-anio">1955</span>
+                                <p>Una almohada y un acolchado pintados y colgados como si fueran un cuadro.</p>
+                            </li>
+                            <li>
+                                <strong>Monogram</strong><span class="obra-anio">1955–59</span>
+                                <p>Una cabra de angora embalsamada con un neumático alrededor.</p>
+                            </li>
+                            <li>
+                                <strong>Canyon</strong><span class="obra-anio">1959</span>
+                                <p>Combine con un águila embalsamada, pintura y objetos encontrados.</p>
+                            </li>
+                            <li>
+                                <strong>Retroactive I</strong><span class="obra-anio">1964</span>
+                                <p>Serigrafía con imágenes del presidente Kennedy y de la carrera espacial.</p>
+                            </li>
+                        </ul>
+
+                        <p class="artista-curiosidad"> En 1964 recibió el Gran Premio de pintura de la Bienal de
+                            Venecia, un reconocimiento inédito para un artista estadounidense.</p>
+                    </div>
+                </article>
+
+            </section>
+
+
+            <section class="seccion-galeria-filtrable">
+
+                <h2 class="subtitulo-galeria">GALERÍA DE OBRAS</h2>
+
+                <div class="barra-filtros">
+                    <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+                    <button class="btn-filtro" data-filtro="warhol">Andy Warhol</button>
+                    <button class="btn-filtro" data-filtro="lichtenstein">Roy Lichtenstein</button>
+                    <button class="btn-filtro" data-filtro="haring">Keith Haring</button>
+                    <button class="btn-filtro" data-filtro="rauschenberg">Robert Rauschenberg</button>
+                </div>
+
+
+                <div class="grid-galeria" id="gridGaleria">
+
+
+                    <div class="item-galeria warhol">
+                        <div class="wrap-img">
+                            <img src="img/warhol-obra1.jpg" alt="Marilyn Monroe - Andy Warhol">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Marilyn Monroe</span>
+                            <span class="sub-foto">Andy Warhol</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item-galeria warhol">
+                        <div class="wrap-img">
+                            <img src="img/warhol-obra2.jpg" alt="Lata de Sopa Campbell's - Andy Warhol">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Sopa Campbell's</span>
+                            <span class="sub-foto">Andy Warhol</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria warhol">
+                        <div class="wrap-img">
+                            <img src="img/warhol-liz.jpg" alt="Liz Taylor - Andy Warhol">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Liz Taylor</span>
+                            <span class="sub-foto">Andy Warhol</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria lichtenstein">
+                        <div class="wrap-img">
+                            <img src="img/lichtenstein-obra1.jpg" alt="Look Mickey - Roy Lichtenstein">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Look Mickey</span>
+                            <span class="sub-foto">Roy Lichtenstein</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria lichtenstein">
+                        <div class="wrap-img">
+                            <img src="img/lichtenstein-obra2.jpg" alt="Girl with Hair Ribbon - Roy Lichtenstein">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Girl with Ribbon</span>
+                            <span class="sub-foto">Roy Lichtenstein</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria lichtenstein">
+                        <div class="wrap-img">
+                            <img src="img/lichtenstein-crying-girl.jpg" alt="Crying Girl - Roy Lichtenstein">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Crying Girl</span>
+                            <span class="sub-foto">Roy Lichtenstein</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria haring">
+                        <div class="wrap-img">
+                            <img src="img/haring-obra1.jpg" alt="Barking Dog - Keith Haring">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Barking Dog</span>
+                            <span class="sub-foto">Keith Haring</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria haring ancho-completo">
+                        <div class="wrap-img">
+                            <img src="img/haring-obra2.jpg" alt="Radiant Baby - Keith Haring">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Radiant Baby</span>
+                            <span class="sub-foto">Keith Haring</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria haring">
+                        <div class="wrap-img">
+                            <img src="img/haring-pop-shop.jpg" alt="Pop Shop III - Keith Haring">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Pop Shop III</span>
+                            <span class="sub-foto">Keith Haring</span>
+                        </div>
+                    </div>
+
+
+                    <div class="item-galeria rauschenberg">
+                        <div class="wrap-img">
+                            <img src="img/rauschenberg-obra1.jpg" alt="Canyon - Robert Rauschenberg">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Canyon</span>
+                            <span class="sub-foto">Robert Rauschenberg</span>
+                        </div>
+                    </div>
+
+                    <div class="item-galeria rauschenberg">
+                        <div class="wrap-img">
+                            <img src="img/rauschenberg-obra2.jpg" alt="Retroactive I - Robert Rauschenberg">
+                        </div>
+                        <div class="etiqueta-obra">
+                            <span class="titulo-foto">Retroactive I</span>
+                            <span class="sub-foto">Robert Rauschenberg</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="footer-pop">
+            <div class="footer-contenido">
+                <div class="footer-marca">
+                    <span class="logo-texto">POP ART</span>
+                    <p>El arte de transformar lo cotidiano en icono.</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 Pop Art</p>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <div class="modal-visor" id="modalVisor">
+        <span class="cerrar-modal" id="cerrarModal">&times;</span>
+        <img class="imagen-agrandada" id="imgModal" src="" alt="Obra ampliada">
+        <div class="epigrafe-modal" id="captionModal"></div>
+    </div>
+
+
+    <div class="modal-overlay" id="modalArtista">
+        <div class="modal-popart modal-artista">
+            <button class="cerrar-popart" id="btnCerrarArtista" aria-label="Cerrar">✕</button>
+
+            <div class="modal-popart-header" id="artistaHeader">
+                <h2 id="artistaNombre">NOMBRE</h2>
+                <p class="artista-rol" id="artistaRol"></p>
+            </div>
+
+            <div class="modal-artista-body">
+                <div class="artista-top">
+                    <img class="artista-foto" id="artistaFoto" src="" alt="">
+                    <div class="artista-fichas" id="artistaFichas"></div>
+                </div>
+
+                <h3 class="artista-subtitulo">SU HISTORIA</h3>
+                <div class="artista-bio" id="artistaBio"></div>
+
+                <h3 class="artista-subtitulo">OBRAS CLAVE</h3>
+                <ul class="artista-obras" id="artistaObras"></ul>
+
+                <div class="modal-extra-info" id="artistaCuriosidad"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="artistas.js"></script>
+
+</body>
+
+</html>

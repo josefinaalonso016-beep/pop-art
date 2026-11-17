@@ -32,11 +32,12 @@ body {
 }
 
 .logo {
-    width: 130px;
+    width: 250px;
+    flex-shrink: 0;
 }
 
 .logo img {
-    width: 110px;
+    width: 230px;
     height: auto;
     display: block;
 }
@@ -64,13 +65,6 @@ body {
     background-color: #ffd900;
 }
 
-.buscar {
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: 15px;
-}
 
 main {
     width: 100%;
@@ -142,7 +136,7 @@ main {
     box-shadow: 2px 2px 0 black;
 }
 
-/* Footer */
+
 .footer {
     width: 100%;
     padding: 18px;
@@ -249,27 +243,6 @@ main {
     text-decoration: underline;
 }
 
-.buscar {
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-left: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.buscar:hover {
-    color: #ffd900;
-    transform: scale(1.1);
-}
-
-.buscar svg {
-    width: 22px;
-    height: 22px;
-}
 
 .contenido-historia {
     padding: 30px 40px;
@@ -468,7 +441,7 @@ main {
     box-shadow: 4px 4px 0 black;
     max-width: 450px;
     margin: 0 auto;
-    /* Centra el bloque */
+
 }
 
 .footer-marca .logo-texto {
@@ -500,7 +473,7 @@ main {
     margin-bottom: 30px;
 }
 
-/* Grid layout similar al wireframe */
+
 .grid-tecnicas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -512,7 +485,6 @@ main {
     grid-column: span 2;
 }
 
-/* Tarjeta individual */
 .card-tecnica {
     border: 3.5px solid black;
     border-radius: 12px;
@@ -538,7 +510,6 @@ main {
     border-bottom: 3.5px solid black;
 }
 
-/* Colores de las cabeceras */
 .tarjeta-rosada .header-card {
     background-color: #ff3377;
 }
@@ -639,6 +610,35 @@ main {
 
 .cerrar-popart:hover {
     background-color: #ffd900;
+}
+
+.intro-tecnicas-bloque {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.intro-tecnicas-bloque .intro-tecnicas {
+    margin-bottom: 0;
+
+}
+
+.foto-intro {
+    width: 320px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    border: 3.5px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 black;
+}
+
+.foto-intro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .modal-popart-header {
@@ -930,7 +930,7 @@ main {
     padding: 30px 20px;
 }
 
-/* TITULO DE LA GALERÍA */
+
 .subtitulo-galeria {
     font-family: 'Bangers', cursive;
     font-size: 38px;
@@ -1269,4 +1269,876 @@ main {
     background-color: #2ecc71;
     color: white;
     box-shadow: 3px 3px 0 black;
+}
+
+.buscador-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+    margin-left: 15px;
+    padding: 5px 8px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: white;
+    flex-shrink: 0;
+    height: 36px;
+}
+
+.input-buscar {
+    display: block;
+    width: 95px;
+    height: 25px;
+    border: none !important;
+    outline: none;
+    background: transparent;
+    padding: 3px 5px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    color: black;
+    box-shadow: none !important;
+}
+
+.input-buscar::placeholder {
+    color: #777;
+}
+
+.buscar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    padding: 3px;
+    margin: 0;
+    color: black;
+    cursor: pointer;
+}
+
+.buscar svg {
+    width: 19px;
+    height: 19px;
+}
+
+.buscar:hover {
+    color: #e01d3b;
+    transform: scale(1.1);
+}
+
+
+/* ==========================
+   SECCION ESTILO POP
+========================== */
+
+.estilo-pop {
+    padding: 35px 30px 40px;
+    background-color: #f7f7f7;
+    background-image: radial-gradient(#d5d5d5 1.2px, transparent 1.2px);
+    background-size: 13px 13px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.estilo-pop>h2 {
+    font-family: "Bangers", cursive;
+    font-size: 32px;
+    text-align: center;
+    margin: 0 0 25px;
+    letter-spacing: 1px;
+}
+
+.grid-estilo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.item-estilo {
+    min-height: 105px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease;
+}
+
+.item-estilo:hover {
+    transform: translateY(-4px);
+}
+
+.item-estilo .numero {
+    font-family: "Bangers", cursive;
+    font-size: 29px;
+}
+
+.item-estilo h3 {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.amarillo {
+    background-color: #ffdc00;
+}
+
+.rosa {
+    background-color: #ed2855;
+    color: white;
+}
+
+.azul {
+    background-color: #168fe0;
+    color: white;
+}
+
+.blanco {
+    background-color: white;
+}
+
+
+.historia-pop {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 18px;
+    padding: 22px 15px;
+}
+
+.historia-pop h2 {
+    font-family: "Bangers", cursive;
+    font-size: 27px;
+    text-align: center;
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+}
+
+.linea-tiempo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 10px;
+}
+
+.momento span {
+    font-family: "Bangers", cursive;
+    font-size: 30px;
+    color: #ed2855;
+}
+
+.momento p {
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+
+.texto-historia p+p {
+    margin-top: 12px;
+}
+
+/* Fichas rápidas */
+.datos-rapidos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.dato-chip {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 14px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 black;
+}
+
+.dato-chip span {
+    font-family: "Bangers", cursive;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+.dato-chip strong {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.chip-amarillo {
+    background-color: #ffd900;
+}
+
+.chip-rosa {
+    background-color: #ff3377;
+}
+
+.chip-azul {
+    background-color: #0099ff;
+}
+
+
+.dato-destacado {
+    margin-top: 18px;
+    background-color: #f7f3e8;
+    border: 2.5px solid black;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+    box-shadow: 3px 3px 0 black;
+}
+
+
+.linea-hitos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.hito {
+    display: flex;
+    align-items: stretch;
+    background-color: white;
+    border: 3.5px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 black;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hito:hover {
+    transform: translateY(-3px);
+    box-shadow: 7px 7px 0 black;
+}
+
+.hito-anio {
+    width: 130px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bangers", cursive;
+    font-size: 36px;
+    letter-spacing: 1px;
+    border-right: 3.5px solid black;
+}
+
+.hito:nth-child(3n+1) .hito-anio {
+    background-color: #ffd900;
+}
+
+.hito:nth-child(3n+2) .hito-anio {
+    background-color: #ff3377;
+}
+
+.hito:nth-child(3n+3) .hito-anio {
+    background-color: #0099ff;
+}
+
+.hito-texto {
+    padding: 15px 22px;
+}
+
+.hito-texto h3 {
+    font-family: "Bangers", cursive;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.hito-texto p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: #222;
+}
+
+/* ---------- BOTÓN "MÁS INFO" EN TARJETAS DE ARTISTAS ---------- */
+.card-obra .info-obra {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-obra .info-obra p {
+    flex-grow: 1;
+    /* empuja el botón abajo y los 4 quedan alineados */
+}
+
+.btn-mas-info {
+    align-self: flex-start;
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffd900;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-family: "Bangers", cursive;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 black;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-mas-info span {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1;
+    color: #ff3377;
+    -webkit-text-stroke: 1px black;
+    transition: transform 0.2s ease;
+}
+
+.btn-mas-info:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 black;
+}
+
+.btn-mas-info:hover span {
+    transform: translateX(4px);
+}
+
+
+.modal-artista {
+    max-width: 760px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-artista .modal-popart-header {
+    flex-shrink: 0;
+}
+
+.artista-rol {
+    font-size: 14px;
+    font-weight: 800;
+    margin-top: 4px;
+}
+
+.modal-artista-body {
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.artista-top {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.artista-foto {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    object-position: top center;
+    border: 3.5px solid black;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 black;
+    flex-shrink: 0;
+}
+
+.artista-fichas {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.artista-ficha {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 8px 12px;
+    box-shadow: 3px 3px 0 black;
+    background-color: white;
+}
+
+.artista-ficha:nth-child(1) {
+    background-color: #ffd900;
+}
+
+.artista-ficha:nth-child(2) {
+    background-color: #ff3377;
+}
+
+.artista-ficha:nth-child(3) {
+    background-color: #0099ff;
+}
+
+.artista-ficha span {
+    display: block;
+    font-family: "Bangers", cursive;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.artista-ficha strong {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.artista-subtitulo {
+    display: inline-block;
+    font-family: "Bangers", cursive;
+    font-size: 24px;
+    letter-spacing: 1px;
+    background-color: #ffd900;
+    border: 3px solid black;
+    padding: 2px 14px;
+    box-shadow: 3px 3px 0 black;
+    transform: rotate(-1deg);
+    margin: 22px 0 12px;
+}
+
+.artista-bio p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.artista-obras {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.artista-obras li {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px 14px;
+    background-color: #f7f3e8;
+    box-shadow: 3px 3px 0 black;
+}
+
+.artista-obras li strong {
+    font-family: "Bangers", cursive;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.obra-anio {
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #ff3377;
+}
+
+.artista-obras li p {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 4px 0 0;
+}
+
+.contacto-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1050px;
+}
+
+.contacto-layout .contenedor-contacto-central {
+    flex: 1;
+    max-width: 480px;
+}
+
+.contacto-fotos {
+    flex: 1;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.foto-contacto {
+    border: 3.5px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 6px 6px 0 black;
+    aspect-ratio: 4 / 3;
+    transition: transform 0.2s ease;
+}
+
+.foto-contacto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.foto-contacto-1 {
+    transform: rotate(2deg);
+}
+
+.foto-contacto-2 {
+    transform: rotate(-2deg);
+}
+
+.foto-contacto:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+a.boton-registro {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bienvenida-pop {
+    min-height: 600px;
+    padding: 80px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffd900;
+    gap: 22px;
+}
+
+.bienvenida-etiqueta {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.bienvenida-pop h1 {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(65px, 10vw, 115px);
+    line-height: 0.95;
+    margin: 10px 0;
+    color: #111;
+}
+
+.bienvenida-pop h2 {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(25px, 4vw, 38px);
+    margin: 0;
+    color: #111;
+}
+
+.bienvenida-pop p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+}
+
+.bienvenida-pop .boton-registro {
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.cerrar-bienvenida {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: #111;
+    text-decoration: underline;
+}
+
+.mensaje-error {
+    color: #e32636;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+/* ============================= */
+/* POP-ART SHOP */
+/* ============================= */
+
+.tienda-portada {
+    min-height: 430px;
+    padding: 75px 25px;
+    background-color: #ffd900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+}
+
+.tienda-portada span,
+.tienda-titulo span {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.tienda-portada h1 {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(65px, 10vw, 115px);
+    margin: 0;
+    color: #111;
+}
+
+.tienda-portada h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 35px;
+    margin: 0;
+}
+
+.tienda-portada p {
+    max-width: 600px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.tienda-boton {
+    display: inline-block;
+    border: 3px solid #111;
+    background-color: #e84b91;
+    color: #111;
+    padding: 13px 25px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #111;
+    transition: 0.2s;
+}
+
+.tienda-boton:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+}
+
+.tienda-catalogo {
+    padding: 75px 8%;
+    background-color: #f7f4f4;
+}
+
+.tienda-titulo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.tienda-titulo h2,
+.carrito-seccion h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 48px;
+    margin: 12px 0;
+}
+
+.tienda-titulo p,
+.carrito-ayuda {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.producto {
+    background-color: white;
+    border: 3px solid #111;
+    box-shadow: 6px 6px 0 #111;
+}
+
+.producto-imagen {
+    min-height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 3px solid #111;
+    text-align: center;
+}
+
+.producto-imagen span {
+    font-family: 'Bangers', cursive;
+    font-size: 65px;
+    line-height: 0.95;
+    color: #111;
+    text-shadow: 3px 3px 0 white;
+    transform: rotate(-7deg);
+}
+
+.producto-remera {
+    background: radial-gradient(circle, #fff 20%, transparent 21%), #e84b91;
+    background-size: 18px 18px;
+}
+
+.producto-tote {
+    background: linear-gradient(135deg, #46c9e8, #ffd900);
+}
+
+.producto-poster {
+    background: repeating-linear-gradient(45deg, #ffd900, #ffd900 20px, #e84b91 20px, #e84b91 40px);
+}
+
+.producto-taza {
+    background: radial-gradient(circle at center, #fff 0 25%, #46c9e8 26% 55%, #ffd900 56%);
+}
+
+.producto-stickers {
+    background: linear-gradient(45deg, #e84b91, #ffd900, #46c9e8);
+}
+
+.producto-cuaderno {
+    background: repeating-linear-gradient(90deg, #46c9e8, #46c9e8 25px, #fff 25px, #fff 50px);
+}
+
+.producto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.producto-info h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 27px;
+    margin: 0;
+}
+
+.producto-info p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+.producto-info strong {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 19px;
+}
+
+.agregar-carrito {
+    border: 2px solid #111;
+    background-color: #ffd900;
+    padding: 12px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.agregar-carrito:hover {
+    background-color: #e84b91;
+}
+
+.carrito-seccion {
+    padding: 65px 10%;
+    background-color: white;
+    text-align: center;
+}
+
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: left;
+}
+
+.carrito-producto button {
+    border: 0;
+    background: none;
+    color: #e32636;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.carrito-vacio {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #666;
+    padding: 20px;
+}
+
+.carrito-total {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 18px;
+    border-top: 3px solid #111;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.compra-aclaracion {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    color: #666;
+    margin-top: 18px;
+}
+
+.mensaje-compra {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.tienda-sesion {
+    padding: 25px;
+    text-align: center;
+    background-color: #ffd900;
+}
+
+.tienda-sesion a {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #111;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.mensaje-compra {
+    font-family: 'Bangers', cursive;
+    font-size: 27px;
+    color: #111;
+    background-color: #ffd900;
+    border: 3px solid #111;
+    padding: 18px;
+    max-width: 550px;
+    margin: 25px auto;
+    box-shadow: 5px 5px 0 #111;
+}
+
+.producto-imagen {
+    height: 250px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
